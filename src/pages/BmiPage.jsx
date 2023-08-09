@@ -12,6 +12,7 @@ const BmiPage = () => {
     // let weight = 65;
     // let Age = 25;
     // let BmiValue = 20.06;
+        let Message = "Under Weight ";
 
     const [height , setheight ] = useState(180);
     const [weight , setweight ] = useState(65);
@@ -62,9 +63,11 @@ const BmiPage = () => {
         // BmiValue = (((weight)/(height*height))*10000);
         // BmiValue = Number(BmiValue.toFixed(1));
 
-        setBmiValue(BmiValue => Number((((weight)/(height*height))*10000).toFixed(1))); 
+        setBmiValue(BmiValue => Number((((weight)/(height*height))*10000).toFixed(3))); 
         console.log("I am BmiCalculate" , BmiValue);
     }
+
+    // Now We Have To Tell That At which Category of BMI 
 
 return (
     <div className='container row '>
