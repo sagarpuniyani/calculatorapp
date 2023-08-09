@@ -92,6 +92,7 @@ const BmiPage = () => {
             setMessage(Message => "Obesity class III ");            
         }
     }
+
     const Icons = <i class="fa-solid fa-calculator"></i>;
 return (
     <div className='container  '>
@@ -100,13 +101,13 @@ return (
             <p>Gender : <RadioButton /> Male <RadioButton /> Female </p>
             <p>Height : <TextFeild fn={HandleHeight}  place ="Enter Height in CM " /> </p>
             <p>Weight : <TextFeild fn={HandleWeight} place ="Enter Weight in KG " /> </p>
-            <div className='output row m-1 col-1' >
-                <Button classname="row  m-2" Func={DeliveyMessage} fn={BmiCalculate}  value="Calculate " icon= {Icons}  />
-                <Button classname="row  m-2" value = "Clear" />
+            <div className='output row m-1 ' >
+                <Button classname="row col-1 m-2 btn btn-success" Func={DeliveyMessage} fn={BmiCalculate}  value="Calculate" icon={Icons} / >
+                <Button classname="row col-1 m-2 btn btn-info" value = "Clear" />
             </div>
             <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} MessageIs={Message} />
     </div>
-)
-}
+);
+};
 
 export default BmiPage
