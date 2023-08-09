@@ -82,6 +82,15 @@ const BmiPage = () => {
         else if(BmiValue < 29.9){
             setMessage(Message => "Overweight");
         }
+        else if(BmiValue < 34.9){
+            setMessage(Message => "Obesity class I ");
+        }
+        else if(BmiValue < 39.9){
+            setMessage(Message => "Obesity class II ");
+        }
+        else {
+            setMessage(Message => "Obesity class III ");            
+        }
     }
 return (
     <div className='container row '>
