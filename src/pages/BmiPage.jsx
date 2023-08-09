@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextFeild from '../components/TextFeild'
 import RadioButton from '../components/RadioButton'
 import Button from '../components/Button'
@@ -8,25 +8,34 @@ const BmiPage = () => {
 
     //  There are three different function to be make so that {To Take the Input Of the Data }
     
-    let height = 180;
-    let weight = 65;
-    let Age = 25;
-    let BmiValue = 0;
+    // let height = 180;
+    // let weight = 65;
+    // let Age = 25;
+    // let BmiValue = 20.06;
+
+    const [height , setheight ] = useState(180);
+    const [weight , setweight ] = useState(65);
+    const [Age , setAge ] = useState(25);
+    const [BmiValue , setBmiValue ] = useState(20.06);
     
     const HandleHeight = (data) =>{
         //  1. For  handle the height 
-        height = data;
+        // height = data;
+        setheight(height => data);
         if(height <=0 ){
-            height = 0;
+            // height = 0;
+            setheight(height => 180);
         }
         console.log("Height = " , height )
     }
     
     const HandleWeight = (data) =>{
         //  2. For Handle the weight 
-        weight = data;
+        // weight = data;
+        setweight(weight => data)
         if(weight <=0 ){
-            weight = 0;
+            // weight = 0;
+            setweight(weight => 65)
         }
         console.log("weight = " , weight )
         
@@ -34,12 +43,15 @@ const BmiPage = () => {
     
     const HandleAge = (data) =>{
         //  3. For Handle the Age 
-        Age = data;
+        // Age = data;
+        setAge(Age => data)
         if(Age <=0 ){
-            Age = 0;
+            // Age = 0;
+            setAge(Age => 25);
         }
         else if(Age > 120 ){
-            Age = 120;
+            // Age = 120;
+            setAge(Age => 25);
         }
         console.log("Age = " , Age )
         
@@ -47,8 +59,10 @@ const BmiPage = () => {
 
     // Now design the Function to calculate the Bmi of the person 
     const BmiCalculate = ()=>{
-        BmiValue = ((weight)/(height*height))*10000;
-        BmiValue = Number(BmiValue.toFixed(1));
+        // BmiValue = (((weight)/(height*height))*10000);
+        // BmiValue = Number(BmiValue.toFixed(1));
+
+        setBmiValue(BmiValue => Number((((weight)/(height*height))*10000).toFixed(1))); 
         console.log("I am BmiCalculate" , BmiValue);
     }
 
