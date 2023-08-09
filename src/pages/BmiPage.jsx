@@ -28,7 +28,7 @@ const BmiPage = () => {
             // height = 0;
             setheight(height => 180);
         }
-        console.log("Height = " , height )
+        // console.log("Height = " , height )
     }
     
     const HandleWeight = (data) =>{
@@ -39,7 +39,7 @@ const BmiPage = () => {
             // weight = 0;
             setweight(weight => 65)
         }
-        console.log("weight = " , weight )
+        // console.log("weight = " , weight )
         
     }
     
@@ -55,7 +55,7 @@ const BmiPage = () => {
             // Age = 120;
             setAge(Age => 25);
         }
-        console.log("Age = " , Age )
+        // console.log("Age = " , Age )
         
     }
 
@@ -65,7 +65,7 @@ const BmiPage = () => {
         // BmiValue = Number(BmiValue.toFixed(1));
 
         setBmiValue(BmiValue => Number((((weight)/(height*height))*10000).toFixed(3))); 
-        console.log("I am BmiCalculate" , BmiValue);
+        // console.log("I am BmiCalculate" , BmiValue);
     }
 
     // Now We Have To Tell That At which Category of BMI 
