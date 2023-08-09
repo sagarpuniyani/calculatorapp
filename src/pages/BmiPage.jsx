@@ -6,23 +6,41 @@ import Button from '../components/Button'
 const BmiPage = () => {
 
     //  There are three different function to be make so that {To Take the Input Of the Data }
-    //  1. For  handle the height 
-    //  2. For Handle the weight 
-    //  3. For Handle the Age 
     
-
-    const handleInputChange = () =>{
-        console.log("handleInputChange called ")
+    let height = 180;
+    let weight = 65;
+    let Age = 25;
+    
+    const HandleHeight = (data) =>{
+        //  1. For  handle the height 
+        height = data;
+        console.log("Height = " , height )
     }
+    
+    const HandleWeight = (data) =>{
+        //  2. For Handle the weight 
+        weight = data;
+        console.log("weight = " , weight )
+        
+    }
+    
+    const HandleAge = (data) =>{
+        //  3. For Handle the Age 
+        Age = data;
+        console.log("Age = " , Age )
+        
+    }
+
+    // Now design the Function to calculate the Bmi of the person 
 
 return (
     <div className='container row '>
-            <p>Age :  <TextFeild fn={handleInputChange} place ="Enter your Age" /> </p>
+            <p>Age :  <TextFeild fn={HandleAge} place ="Enter your Age" /> </p>
             <p>Gender : <RadioButton /> Male <RadioButton /> Female </p>
-            <p>Height : <TextFeild fn={handleInputChange}  place ="Enter Height in CM " /> </p>
-            <p>Weight : <TextFeild fn={handleInputChange} place ="Enter Weight in KG " /> </p>
+            <p>Height : <TextFeild fn={HandleHeight}  place ="Enter Height in CM " /> </p>
+            <p>Weight : <TextFeild fn={HandleWeight} place ="Enter Weight in KG " /> </p>
             <div className='output row col-1' >
-                <Button value="Calculate " />
+                <Button  value="Calculate " />
                 <Button  value = "Clear" />
             </div>
     </div>

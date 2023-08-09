@@ -4,7 +4,10 @@ const TextFeild = (props) => {
 
     const clicked = (event )=>{
         var data = event.target.value;
+        data = isNaN(parseInt(data))?0:parseInt(data);
+        props.fn(data);
         console.log("Data " , data);
+        console.log("Type of data " , typeof(data))
         
     }
 
