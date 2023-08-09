@@ -1,8 +1,13 @@
 import React from 'react'
 
 const Button = (props) => {
+
+    const clicked = ()=>{
+        props.fn();
+    }
+
     return (<>
-    <button> {props.value} </button>
+    <button onClick={clicked} > {props.value} </button>
     </>)
 }
 

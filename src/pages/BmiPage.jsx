@@ -2,6 +2,7 @@ import React from 'react'
 import TextFeild from '../components/TextFeild'
 import RadioButton from '../components/RadioButton'
 import Button from '../components/Button'
+import Output from '../components/Output'
 
 const BmiPage = () => {
 
@@ -10,6 +11,7 @@ const BmiPage = () => {
     let height = 180;
     let weight = 65;
     let Age = 25;
+    let BmiValue = 0;
     
     const HandleHeight = (data) =>{
         //  1. For  handle the height 
@@ -45,7 +47,9 @@ const BmiPage = () => {
 
     // Now design the Function to calculate the Bmi of the person 
     const BmiCalculate = ()=>{
-        console.log("I am BmiCalculate")
+        BmiValue = ((weight)/(height*height))*10000;
+        BmiValue = Number(BmiValue.toFixed(1));
+        console.log("I am BmiCalculate" , BmiValue);
     }
 
 return (
@@ -58,6 +62,7 @@ return (
                 <Button fn={BmiCalculate}  value="Calculate " />
                 <Button value = "Clear" />
             </div>
+            <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} />
     </div>
 )
 }
