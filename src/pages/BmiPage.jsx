@@ -99,7 +99,7 @@ return (
             <p>Height : <TextFeild fn={HandleHeight}  place ="Enter Height in CM " /> </p>
             <p>Weight : <TextFeild fn={HandleWeight} place ="Enter Weight in KG " /> </p>
             <div className='output row col-1' >
-                <Button fn={BmiCalculate}  value="Calculate " />
+                <Button Func={DeliveyMessage} fn={BmiCalculate}  value="Calculate " />
                 <Button value = "Clear" />
             </div>
             <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} MessageIs={Message} />
