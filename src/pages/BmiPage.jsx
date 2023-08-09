@@ -12,12 +12,13 @@ const BmiPage = () => {
     // let weight = 65;
     // let Age = 25;
     // let BmiValue = 20.06;
-        let Message = "Under Weight ";
+    // let Message = "Normal Weight ";
 
     const [height , setheight ] = useState(180);
     const [weight , setweight ] = useState(65);
     const [Age , setAge ] = useState(25);
     const [BmiValue , setBmiValue ] = useState(20.06);
+    const [Message , setMessage ] = useState("Normal Weight");
     
     const HandleHeight = (data) =>{
         //  1. For  handle the height 
@@ -68,6 +69,7 @@ const BmiPage = () => {
     }
 
     // Now We Have To Tell That At which Category of BMI 
+    
 
 return (
     <div className='container row '>
@@ -79,7 +81,7 @@ return (
                 <Button fn={BmiCalculate}  value="Calculate " />
                 <Button value = "Clear" />
             </div>
-            <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} />
+            <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} MessageIs={Message} />
     </div>
 )
 }
