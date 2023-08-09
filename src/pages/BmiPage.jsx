@@ -69,8 +69,14 @@ const BmiPage = () => {
     }
 
     // Now We Have To Tell That At which Category of BMI 
-    
-
+    const DeliveyMessage = ()=> {
+        if(BmiValue < 16 ){
+            setMessage(Message => "Severely underweight ");
+        }
+        else if(BmiValue < 18){
+            setMessage(Message => "Underweight ");
+        }
+    }
 return (
     <div className='container row '>
             <p>Age :  <TextFeild fn={HandleAge} place ="Enter your Age" /> </p>
