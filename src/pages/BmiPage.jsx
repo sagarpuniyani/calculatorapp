@@ -18,7 +18,7 @@ const BmiPage = () => {
     const [weight , setweight ] = useState(65);
     const [Age , setAge ] = useState(25);
     const [BmiValue , setBmiValue ] = useState(20.06);
-    const [Message , setMessage ] = useState("Normal Weight");
+    const [Message , setMessage ] = useState("Category of Body Mass Index ");
     
     const HandleHeight = (data) =>{
         //  1. For  handle the height 
@@ -70,11 +70,17 @@ const BmiPage = () => {
 
     // Now We Have To Tell That At which Category of BMI 
     const DeliveyMessage = ()=> {
-        if(BmiValue < 16 ){
+        if(BmiValue < 16.5 ){
             setMessage(Message => "Severely underweight ");
         }
-        else if(BmiValue < 18){
+        else if(BmiValue < 18.5){
             setMessage(Message => "Underweight ");
+        }
+        else if(BmiValue < 24.9){
+            setMessage(Message => "Normal weight ");
+        }
+        else if(BmiValue < 29.9){
+            setMessage(Message => "Overweight");
         }
     }
 return (
