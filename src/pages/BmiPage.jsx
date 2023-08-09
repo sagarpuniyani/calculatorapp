@@ -5,6 +5,12 @@ import Button from '../components/Button'
 
 const BmiPage = () => {
 
+    //  There are three different function to be make so that {To Take the Input Of the Data }
+    //  1. For  handle the height 
+    //  2. For Handle the weight 
+    //  3. For Handle the Age 
+    
+
     const handleInputChange = () =>{
         console.log("handleInputChange called ")
     }
