@@ -94,18 +94,17 @@ const BmiPage = () => {
     }
     const Icons = <i class="fa-solid fa-calculator"></i>;
 return (
-    <div className='container row '>
+    <div className='container  '>
 
             <p>Age :  <TextFeild fn={HandleAge} place ="Enter your Age" /> </p>
             <p>Gender : <RadioButton /> Male <RadioButton /> Female </p>
             <p>Height : <TextFeild fn={HandleHeight}  place ="Enter Height in CM " /> </p>
             <p>Weight : <TextFeild fn={HandleWeight} place ="Enter Weight in KG " /> </p>
-            <div className='output row col-1' >
-                <Button Func={DeliveyMessage} fn={BmiCalculate}  value="Calculate " icon= {Icons}  />
-                <Button value = "Clear" />
+            <div className='output row m-1 col-1' >
+                <Button classname="row  m-2" Func={DeliveyMessage} fn={BmiCalculate}  value="Calculate " icon= {Icons}  />
+                <Button classname="row  m-2" value = "Clear" />
             </div>
             <Output heightIs= {height} WeightIs = {weight}  AgeIs = {Age}  Bmi = {BmiValue} MessageIs={Message} />
-
     </div>
 )
 }
