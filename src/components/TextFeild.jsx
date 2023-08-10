@@ -6,8 +6,6 @@ const TextFeild = (props) => {
         var data = event.target.value;
         data = isNaN(parseFloat(data))?0:parseFloat(data);
         props.fn(data);
-        // console.log("Data " , data);
-        // console.log("Type of data " , typeof(data))
         
     }
 

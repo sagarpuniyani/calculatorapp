@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RadioButton = () => {
+const RadioButton = ({gender}) => {
   return (
-    <input type="radio"  />
+    <input type="radio"  name="gender"  />
   )
 }
 
